@@ -2,7 +2,7 @@
 
 ## A software engineering exercise
 
-<https://travis-ci.com/ECM3432/ECM3432-2021-minsky>
+<https://travis-ci.com/github/ExeterBScDTS/ECM3432-2021-minsky>
 
 ![robot picture](minsky.jpg "I can help")
 
