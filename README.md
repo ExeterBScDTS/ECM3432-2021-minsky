@@ -10,7 +10,7 @@
 
 To run the backend of this application:
 
-Run yarn main from the top level directory of the project
+Run ```yarn main``` from the top level directory of the project
 
 To run the front end of this application:
 
