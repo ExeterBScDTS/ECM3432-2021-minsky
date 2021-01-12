@@ -1,8 +1,8 @@
-# ECM3432-2020-minsky
+# ECM3432-2021-minsky
 
 ## A software engineering exercise
 
-<https://travis-ci.com/ECM3432-O/ECM3432-2020-minsky>
+<https://travis-ci.com/github/ExeterBScDTS/ECM3432-2021-minsky>
 
 ![robot picture](minsky.jpg "I can help")
 
@@ -10,7 +10,7 @@
 
 To run the backend of this application:
 
-Run yarn main from the top level directory of the project
+Run ```yarn main``` from the top level directory of the project
 
 To run the front end of this application:
 
