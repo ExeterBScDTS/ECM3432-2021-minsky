@@ -1,8 +1,8 @@
-# ECM3432-2020-minsky
+# ECM3432-2021-minsky
 
 ## A software engineering exercise
 
-<https://travis-ci.com/ECM3432-O/ECM3432-2020-minsky>
+<https://travis-ci.com/ECM3432/ECM3432-2021-minsky>
 
 ![robot picture](minsky.jpg "I can help")
 
