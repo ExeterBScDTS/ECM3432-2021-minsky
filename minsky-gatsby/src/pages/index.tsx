@@ -39,6 +39,9 @@ const IndexPage = () => {
       </div>
       <div className="row">
         <Composite id="comp"  width={480} height={640} callback={fn} controls="off" />
+        <div className="col-sm-1">
+          
+        </div>
         <TemperaturePlot id="plot" width={300} height={400} pal={200} latest={plotData} min={plotMin} max={plotMax} />
       </div>
     </Layout>

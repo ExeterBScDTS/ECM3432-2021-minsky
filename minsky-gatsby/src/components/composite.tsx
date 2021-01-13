@@ -23,6 +23,7 @@ class Composite extends React.Component<MyProps>{
     private ctx: CanvasRenderingContext2D
     private rgbC: RGBCanvas
     private tirC: TIRCanvas
+    private degrees: number = 0;
 
     state = {
         x: 50, y: 50, scale: 1.7,
@@ -134,7 +135,22 @@ class Composite extends React.Component<MyProps>{
         this.autoRefresh();
     }
 
+    leftRotate() {
+        this.degrees += 90
+        if (this.degrees == 360) {
+            this.degrees = 0
+        }
+    }
+
+    rightRotate() {
+        this.degrees -= 90
+        if (this.degrees == -360) {
+            this.degrees = 0
+        }
+    }
+
     render() {
+        const styles = { transform : `rotate(` + this.degrees + `deg)`};
 
         // className="image_cw"
         return (
@@ -145,7 +161,10 @@ class Composite extends React.Component<MyProps>{
                             ({ x, y }) => { this.setState({ y: y }) }
                         } style={{ height: this.props.height, visibility: this.state.vis }} />
                         <canvas onMouseMove={this._onMouseMove.bind(this)} className="image" ref="canvas"
-                            width={this.props.width} height={this.props.height} />
+                            width={this.props.width} height={this.props.height} style={styles}/>
+                        <br/>
+                        <button onClick={() => this.rightRotate()} >Rotate 90* Anticlockwise</button>
+                        <button onClick={() => this.leftRotate()} style={{position: "relative", left:"25%"}}>Rotate 90* Clockwise</button>
                     </div>
                     <div>
                         <Slider axis="x" x={this.state.x} onChange={
