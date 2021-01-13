@@ -2,6 +2,8 @@
 
 ## A software engineering exercise
 
+<!-- TEST -->
+
 <https://travis-ci.com/github/ExeterBScDTS/ECM3432-2021-minsky>
 
 ![robot picture](minsky.jpg "I can help")
