@@ -11,10 +11,6 @@ buildNumber.properties
 # Avoid ignoring Maven wrapper jar file (.jar files are usually ignored)
 !/.mvn/wrapper/maven-wrapper.jar
 
-
-# My temporary/test dir
-test/
-
 # Various VS Code stuff as found along the way
 .settings
 .classpath
