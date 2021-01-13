@@ -28,4 +28,4 @@ jobs:
     - stage: frontend
       script: cd ./minsky-gatsby && yarn && yarn build
     - stage: backend
-      script: cd ./minsky-one && mvn jetty:run
+      script: cd ./minsky-one && mvn compile && mvn package
