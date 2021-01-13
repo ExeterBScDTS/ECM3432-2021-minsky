@@ -26,6 +26,6 @@ deploy:
 jobs:
   include:
     - stage: frontend
-      script: cd ./minsky-gatsby && yarn build
+      script: cd ./minsky-gatsby && yarn && yarn build
     - stage: backend
       script: cd ./minsky-one && mvn jetty:run
