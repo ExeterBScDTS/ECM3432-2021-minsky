@@ -24,6 +24,7 @@ class Composite extends React.Component<MyProps>{
     private rgbC: RGBCanvas
     private tirC: TIRCanvas
     private degrees: number = 0;
+    private adjustment: number = 0;
 
     state = {
         x: 50, y: 50, scale: 1.7,
@@ -137,6 +138,11 @@ class Composite extends React.Component<MyProps>{
 
     leftRotate() {
         this.degrees += 90
+        if (this.degrees == -90 || this.degrees == 90 || this.degrees == -270 || this.degrees == 270) {
+            this.adjustment = 120
+        } else {
+            this.adjustment = 0
+        }
         if (this.degrees == 360) {
             this.degrees = 0
         }
@@ -144,6 +150,11 @@ class Composite extends React.Component<MyProps>{
 
     rightRotate() {
         this.degrees -= 90
+        if (this.degrees == -90 || this.degrees == 90 || this.degrees == -270 || this.degrees == 270) {
+            this.adjustment = 120
+        } else {
+            this.adjustment = 0
+        }
         if (this.degrees == -360) {
             this.degrees = 0
         }
@@ -159,7 +170,7 @@ class Composite extends React.Component<MyProps>{
                     <div>
                         <Slider axis="y" y={this.state.y} onChange={
                             ({ x, y }) => { this.setState({ y: y }) }
-                        } style={{ height: this.props.height, visibility: this.state.vis }} />
+                        } style={{ height: this.props.height, visibility: this.state.vis, right: this.adjustment}} />
                         <canvas onMouseMove={this._onMouseMove.bind(this)} className="image" ref="canvas"
                             width={this.props.width} height={this.props.height} style={styles}/>
                         <br/>
