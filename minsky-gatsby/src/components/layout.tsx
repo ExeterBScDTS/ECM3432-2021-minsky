@@ -42,6 +42,7 @@ const Layout = ({ children }:{children:any}) => {
         }}
       >
         <h1>A</h1>
+        <br/>
         <main>{children}</main>
         <footer>
           <hr/>

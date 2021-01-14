@@ -1,6 +1,6 @@
 language: java
 jdk:
-- openjdk11
+- openjdk15
 language: node_js
 node_js:
 - lts/*
@@ -15,7 +15,6 @@ jobs:
       script: 
       - (cd minsky-one && mvn install; export MAVEN_RESULT=$?)
       - if [ "$MAVEN_RESULT" -ne 0 ]; then exit 1; fi
-
 before_deploy:
 - export TAGNAME=`git describe --tags --abbrev=0`
 - deploy-scripts/before-deploy.sh
@@ -31,4 +30,3 @@ deploy:
   on:
     repo: ExeterBScDTS/ECM3432-2021-minsky
     tags: true
-
