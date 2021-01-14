@@ -1,13 +1,20 @@
 language: java
 jdk:
-- openjdk11
+- openjdk15
 language: node_js
 node_js:
 - lts/*
-script:
-- (cd minsky-gatsby && yarn install && yarn build) 
-- (cd minsky-one && mvn package; export MAVEN_RESULT=$?)
-- if [ "$MAVEN_RESULT" -ne 0 ]; then exit 1; fi
+jobs:
+  include:
+    - stage: gatsby-frontend
+      script:
+      - cd minsky-gatsby
+      - yarn install 
+      - yarn build
+    - stage: java-backend
+      script: 
+      - (cd minsky-one && mvn install; export MAVEN_RESULT=$?)
+      - if [ "$MAVEN_RESULT" -ne 0 ]; then exit 1; fi
 before_deploy:
 - export TAGNAME=`git describe --tags --abbrev=0`
 - deploy-scripts/before-deploy.sh

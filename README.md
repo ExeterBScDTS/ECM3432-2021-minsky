@@ -2,7 +2,13 @@
 
 ## A software engineering exercise
 
-<https://travis-ci.com/github/ExeterBScDTS/ECM3432-2021-minsky>
+~~<https://travis-ci.com/github/ExeterBScDTS/ECM3432-2021-minsky>~~
+
+Travis CI:
+
+<https://travis-ci.com/github/ECM3432-A/ECM3432-2021-minsky>
+
+[![Build Status](https://travis-ci.com/ECM3432-A/ECM3432-2021-minsky.svg?branch=main)](https://travis-ci.com/ECM3432-A/ECM3432-2021-minsky)
 
 ![robot picture](minsky.jpg "I can help")
 
@@ -14,7 +20,7 @@ Run ```yarn main``` from the top level directory of the project
 
 To run the front end of this application:
 
-Run yarn frontend at the top level directory of this project.
+Run ```yarn frontend``` at the top level directory of this project.
 
 * If you want to make changes to the front end, you will need to run front end first
 then main.
