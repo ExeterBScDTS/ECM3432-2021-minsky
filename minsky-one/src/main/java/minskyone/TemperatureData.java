@@ -13,8 +13,8 @@ public class TemperatureData {
 
         for (int y = 0; y < 24; y++) {
             for (int x = 0; x < 32; x++) {
-                final Float v = ByteSwapper.swap(in.readFloat());
-                f[y * 32 + x] = v.toString();
+                final float v = Float.intBitsToFloat(Integer.reverseBytes(Float.floatToIntBits(in.readFloat())));
+                f[y * 32 + x] = Float.toString(v);
             }
         }
         in.close();
