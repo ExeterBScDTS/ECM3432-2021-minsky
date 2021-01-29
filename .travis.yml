@@ -17,7 +17,8 @@ jobs:
       - if [ "$MAVEN_RESULT" -ne 0 ]; then exit 1; fi
 before_deploy:
 - export TAGNAME=`git describe --tags --abbrev=0`
-- deploy-scripts/before-deploy.sh
+- echo "PWD is `pwd`"
+- /home/travis/deploy-scripts/before-deploy.sh
 deploy:
   provider: releases
   api_key:
