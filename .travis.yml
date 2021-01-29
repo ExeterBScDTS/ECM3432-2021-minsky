@@ -16,6 +16,7 @@ jobs:
       - (cd minsky-one && mvn install; export MAVEN_RESULT=$?)
       - if [ "$MAVEN_RESULT" -ne 0 ]; then exit 1; fi
     - stage: deploy
+      script: skip
       before_deploy:
       - export TAGNAME=`git describe --tags --abbrev=0`
       - pwd
