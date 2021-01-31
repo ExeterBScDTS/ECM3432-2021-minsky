@@ -23,8 +23,7 @@ jobs:
     - "/home/travis/build/ExeterBScDTS/ECM3432-2021-minsky/deploy-scripts/before-deploy.sh"
     deploy:
       provider: releases
-      api_key:
-        secure: "INTur/ut9LHj4l0FS4BwB7hPSwwAHGYJWEui2qpRxeWRzgcbSjidHCgeb27IVZaU3e6jk0syD3vEhcZ19UwQY/fFAruHGZ6OTO66igJaXfgZZcmzvSuhXhgFJj2RD21GwmJAMw1+N1ulwPwT14X7b6otRQj12o8sNFTtdf9s2r8y2tYTqENk5sBVSsIKXprx0OxNf9cJQ+iYmqyjC5BnuZEpqwKKoYbLdMHUdYeKV7ujdEFiMR8jfL75+gXhSAb9FkbGufEVC7MXOtHat8f2C33Btqw5BuhSvdZokAOgRFmmNppVGV85O7fGoXNVTzvYkpZfygfrZTKJKtZFh2i2vem231PFbDQ5JqM6wQXG/bjis0vL2UJJ9pNgR/NAjDUbhAcbkphYhn9vOD1C85SmfhoBJMHu0sb0B09z5XWFkVFWyX5qrOe2x3r6u1f/oVDPyApPYmSklgp4JECnnuqHzrTRfEIuYcDiUg3B47PthzdzNptRbIJnK4vQt7c1Ec5EH4myCx8otwn89UW4hhA/Ar2AM6mHHOElw0sSbTEyXaDpLLz4HyybOGSFmPyslKfXnVXbtDqA2m2JStsXnU4eClUuRcwT9ODhlpxdWLcYQ8S2aQfu8GznJvRzH823SZRjb9F2SP311ujDykFLoqeg76rZ3o5UcCmfe1lI/MqExKM="
+      api_key: $GITHUB_OAUTH_TOKEN
       file:
       - "/home/travis/install-${TAGNAME}.tar.gz"
       - "/home/travis/minskyOne-${TAGNAME}.zip"
