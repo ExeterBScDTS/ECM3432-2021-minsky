@@ -1,16 +1,17 @@
-language: node_js
-jdk:
-- openjdk15
-node_js:
-- lts/*
 jobs:
   include:
   - stage: gatsby-frontend
+    language: node_js
+    node_js:
+    - lts/*
     script:
     - cd minsky-gatsby
     - yarn install
     - yarn build
   - stage: java-backend
+    language: java
+    jdk:
+    - openjdk15
     script:
     - "(cd minsky-one && mvn install; export MAVEN_RESULT=$?)"
     - if [ "$MAVEN_RESULT" -ne 0 ]; then exit 1; fi

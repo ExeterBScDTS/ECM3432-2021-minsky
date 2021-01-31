@@ -51,6 +51,24 @@ git tag -a v0.1.x -m "v0.1.x"
 git push origin v0.1.x
 ```
 
+### Set-up
+
+To use GitHub releases a GitHub personal API token. See <https://github.com/settings/tokens>
+
+Once you have a token use 
+
+```sh
+# cd to project folder with .travis.yml file
+travis encrypt GITHUB_TOKEN=<THETOKEN> -add --com
+```
+
+This will update ```.travis.yml``` with an encrypted copy of the token.  
+
+If the travis tools aren't installed use ```gem install travis --no-document --user-install```
+
+This blog post is a useful reference <https://p5v.medium.com/using-travis-for-secure-building-and-deployment-to-github-5a97afcac113>
+
+
 ## Runtime
 
 The settings database is loaded at start-up.  This is achieved using ```<load-on-startup>```
