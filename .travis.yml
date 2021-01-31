@@ -9,6 +9,9 @@ jobs:
     - yarn install
     - yarn build
   - stage: build
+    language: node_js
+    node_js:
+    - lts/*
     language: java
     jdk:
     - openjdk15
